@@ -4,21 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d9a7623-25b8-4b95-8991-5b867a464609" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/checkstyle-idea.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/jpa-buddy.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/horus/exceptions/NotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/horus/interfaces/Block.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/horus/interfaces/CompositeBlock.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/horus/interfaces/Structure.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/horus/models/Compound.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/horus/services/Wall.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/test/java/org/horus/services/WallServiceTests.java" afterDir="false" />
+    <list default="true" id="9d9a7623-25b8-4b95-8991-5b867a464609" name="Changes" comment="Implement Task Logic">
+      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/horus/models/BlockModel.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/org/horus/models/CompoundBlock.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/horus/models/Compound.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/horus/services/Wall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/horus/services/Wall.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/org/horus/services/WallServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/horus/services/WallServiceTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,22 +48,12 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.WallServiceTests.findBLockByColorTestsPassIncorrect">
-    <configuration name="WallServiceTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="HorusTask" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="org.horus.services.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="org.horus.services" />
-      <option name="MAIN_CLASS_NAME" value="org.horus.services.WallServiceTests" />
-      <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\K1\JavaProjects\HorusTask" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.WallServiceTests.findBlockModelByColorTestsPassCorrect">
     <configuration name="WallServiceTests.countTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HorusTask" />
       <extension name="coverage">
@@ -133,13 +118,29 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="WallServiceTests.findBlockModelByColorTestsPassCorrect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="HorusTask" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="org.horus.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="org.horus.services" />
+      <option name="MAIN_CLASS_NAME" value="org.horus.services.WallServiceTests" />
+      <option name="METHOD_NAME" value="findBlockModelByColorTestsPassCorrect" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.WallServiceTests.findBlockModelByColorTestsPassCorrect" />
         <item itemvalue="JUnit.WallServiceTests.findBLockByColorTestsPassIncorrect" />
         <item itemvalue="JUnit.WallServiceTests.findBLockByColorTestsPassCorrect" />
         <item itemvalue="JUnit.WallServiceTests.countTests" />
         <item itemvalue="JUnit.WallServiceTests.findBLocksByColorTests" />
-        <item itemvalue="JUnit.WallServiceTests" />
       </list>
     </recent_temporary>
   </component>
@@ -152,8 +153,16 @@
       <option name="presentableId" value="Default" />
       <updated>1702327848152</updated>
       <workItem from="1702327851885" duration="4164000" />
-      <workItem from="1702473670494" duration="44111000" />
+      <workItem from="1702473670494" duration="54372000" />
     </task>
+    <task id="LOCAL-00001" summary="Implement Task Logic">
+      <created>1702614009023</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1702614009023</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -169,5 +178,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Implement Task Logic" />
+    <option name="LAST_COMMIT_MESSAGE" value="Implement Task Logic" />
   </component>
 </project>

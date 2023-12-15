@@ -2,7 +2,6 @@ package org.horus.services;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.stream.Collectors;
 import org.horus.exceptions.NotFoundException;
 import org.horus.interfaces.Block;
 import org.horus.interfaces.CompositeBlock;
@@ -19,6 +18,15 @@ public class Wall implements Structure {
     List<Block> foundBlocks = new ArrayList<>();
     for (Block block : blocks) {
       if (block instanceof CompositeBlock) {
+
+        List<Block> compositeBlocks = ((CompositeBlock) block).getBlocks();
+
+        for (Block compositeBlock : compositeBlocks) {
+          if (compositeBlock.getColor().equals(color)) {
+            foundBlocks.add(compositeBlock);
+          }
+        }
+
         if(block.getColor().equals(color))
         {
           foundBlocks.add(block);
