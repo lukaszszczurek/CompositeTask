@@ -2,67 +2,99 @@ package org.horus.services;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Optional;
 import org.horus.exceptions.NotFoundException;
 import org.horus.interfaces.Block;
 import org.horus.interfaces.CompositeBlock;
 import org.horus.interfaces.Structure;
 
 public class Wall implements Structure {
-   List<Block> blocks;
+  private List<Block> blocks;
 
-  public Wall(List<Block> blocks) {
-    this.blocks = blocks;
+  public Wall() {
+    this.blocks = new ArrayList<>();
   }
+
+  public void addBlock(List<Block> block) {
+    blocks.addAll(block);
+  }
+
   @Override
-  public List<Block> findBlockByColor(String color) {
-    List<Block> foundBlocks = new ArrayList<>();
+  public Optional<Block> findBlockByColor(String color) {
     for (Block block : blocks) {
       if (block instanceof CompositeBlock) {
-
-        List<Block> compositeBlocks = ((CompositeBlock) block).getBlocks();
-
-        for (Block compositeBlock : compositeBlocks) {
-          if (compositeBlock.getColor().equals(color)) {
-            foundBlocks.add(compositeBlock);
-          }
+        Optional<Block> foundBlock = findBlockByColor((CompositeBlock) block, color);
+        if (foundBlock.isPresent()) {
+          return foundBlock;
         }
-
-        if(block.getColor().equals(color))
-        {
-          foundBlocks.add(block);
-        }
-      } else if (block.getMaterial().equals(color)) {
-        foundBlocks.add(block);
+      } else if (block.getColor().equals(color)) {
+        return Optional.of(block);
       }
     }
-
-    if (foundBlocks.isEmpty()) {
-      throw new NotFoundException("block not found (" + color + ")");
-    }
-
-    return foundBlocks;
+    throw new NotFoundException("Block with color " + color + " not found");
   }
 
+  private Optional<Block> findBlockByColor(CompositeBlock compositeBlock, String color) {
+    for (Block block : compositeBlock.getBlocks()) {
+      if (block instanceof CompositeBlock) {
+        Optional<Block> foundBlock = findBlockByColor((CompositeBlock) block, color);
+        if (foundBlock.isPresent()) {
+          return foundBlock;
+        }
+      } else if (block.getColor().equals(color)) {
+        return Optional.of(block);
+      }
+    }
+    return Optional.empty();
+  }
 
   @Override
   public List<Block> findBlocksByMaterial(String material) {
-    List<Block> blocks1 = new ArrayList<>();
-    for(Block block : blocks) {
-      if(block.getMaterial().equals(material))
-      {
-        blocks1.add(block);
+    List<Block> blocksByMaterial = new ArrayList<>();
+    for (Block block : blocks) {
+      if (block instanceof CompositeBlock) {
+        blocksByMaterial.addAll(findBlocksByMaterial((CompositeBlock) block, material));
+      } else if (block.getMaterial().equals(material)) {
+        blocksByMaterial.add(block);
       }
+    }
+    return blocksByMaterial;
+  }
 
+  private List<Block> findBlocksByMaterial(CompositeBlock compositeBlock, String material) {
+    List<Block> blocksByMaterial = new ArrayList<>();
+    for (Block block : compositeBlock.getBlocks()) {
+      if (block instanceof CompositeBlock) {
+        blocksByMaterial.addAll(findBlocksByMaterial((CompositeBlock) block, material));
+      } else if (block.getMaterial().equals(material)) {
+        blocksByMaterial.add(block);
+      }
     }
-    if (blocks1.isEmpty()) {
-      throw new NotFoundException("block not found (" + material + ")");
-    }
-    return blocks1;
+    return blocksByMaterial;
   }
 
   @Override
   public int count() {
-   return blocks.size();
+    int count = 0;
+    for (Block block : blocks) {
+      if (block instanceof CompositeBlock) {
+        count += count((CompositeBlock) block);
+      } else {
+        count++;
+      }
+    }
+    return count;
+  }
 
+  private int count(CompositeBlock compositeBlock) {
+    int count = 0;
+    for (Block block : compositeBlock.getBlocks()) {
+      if (block instanceof CompositeBlock) {
+        count += count((CompositeBlock) block);
+      } else {
+        count++;
+      }
+    }
+    return count;
   }
 }

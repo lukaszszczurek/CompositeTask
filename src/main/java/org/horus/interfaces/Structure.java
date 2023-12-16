@@ -1,10 +1,11 @@
 package org.horus.interfaces;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface Structure {
   // zwraca dowolny element o podanym kolorze
-  List<Block> findBlockByColor(String color);
+  Optional<Block> findBlockByColor(String color);
 
   // zwraca wszystkie elementy z danego materiału
   List<Block> findBlocksByMaterial(String material);
