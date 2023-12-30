@@ -4,14 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d9a7623-25b8-4b95-8991-5b867a464609" name="Changes" comment="Implement Task Logic">
-      <change afterPath="$PROJECT_DIR$/src/main/java/org/horus/composite/Brick.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/horus/interfaces/Structure.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/horus/interfaces/Structure.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/horus/models/CompoundBlock.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/horus/services/Wall.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/horus/services/Wall.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/org/horus/services/WallServiceTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/org/horus/services/WallServiceTests.java" afterDir="false" />
-    </list>
+    <list default="true" id="9d9a7623-25b8-4b95-8991-5b867a464609" name="Changes" comment="fix: reformat code" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,30 +24,54 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 1
+}]]></component>
   <component name="ProjectId" id="2ZPdo537YP0kw4knExdshGG1ajx" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "JUnit.WallServiceTests.testFindBlockByColor.executor": "Run",
+    "JUnit.WallTests$CountTests.shouldReturnAppropriateCountOfBlocksWhenGetCompositeBlockInput.executor": "Run",
+    "JUnit.WallTests$CountTests.shouldReturnAppropriateCountOfBlocksWhenGetSimpleInput.executor": "Run",
+    "JUnit.WallTests$FindBlockByColorTests.shouldReturnAppropriateColorOfBlockWhenGetComplexInput.executor": "Run",
+    "JUnit.WallTests$FindBlockByColorTests.shouldReturnAppropriateColorOfBlockWhenGetCompositeBlockInput.executor": "Run",
+    "JUnit.WallTests$FindBlockByColorTests.shouldReturnAppropriateColorOfBlockWhenGetNestedCompositeBlockInput.executor": "Run",
+    "JUnit.WallTests$FindBlockByColorTests.shouldReturnFalseAtIsPresentSectionWhenBLocksWithGivenColorNoExists.executor": "Run",
+    "JUnit.WallTests$FindBlocksByMaterialTests.shouldReturnAppropriateMaterialOfBlockWhenGetCompositeBlockInput.executor": "Run",
+    "JUnit.WallTests$FindBlocksByMaterialTests.shouldReturnAppropriateMaterialOfBlockWhenGetNestedCompositeBlockInput.executor": "Run",
+    "JUnit.WallTests$FindBlocksByMaterialTests.shouldReturnAppropriateMaterialOfBlockWhenGetSimpleInput.executor": "Run",
+    "JUnit.WallTests$WallTests_1.testFindBlockByColor.executor": "Run",
+    "JUnit.WallTests$testFindBlockByColor.executor": "Run",
+    "JUnit.WallTests$testFindBlockByColor.testFindBlockByColor.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "kotlin-language-version-configured": "true",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "preferences.pluginManager",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\K1\JavaProjects\HorusTask" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.WallServiceTests.findBlockModelByColorTestsPassIncorrect">
-    <configuration name="WallServiceTests.countBLocksTestsPassCorrect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.WallTests$FindBlockByColorTests.shouldReturnFalseAtIsPresentSectionWhenBLocksWithGivenColorNoExists">
+    <configuration name="WallTests$CountTests.shouldReturnAppropriateCountOfBlocksWhenGetCompositeBlockInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HorusTask" />
       <extension name="coverage">
         <pattern>
@@ -62,15 +79,15 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.horus.services" />
-      <option name="MAIN_CLASS_NAME" value="org.horus.services.WallServiceTests" />
-      <option name="METHOD_NAME" value="countBLocksTestsPassCorrect" />
+      <option name="PACKAGE_NAME" value="org.horus.services.WallTests" />
+      <option name="MAIN_CLASS_NAME" value="org.horus.services.WallTests$CountTests" />
+      <option name="METHOD_NAME" value="shouldReturnAppropriateCountOfBlocksWhenGetCompositeBlockInput" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WallServiceTests.findBLockByColorTestsPassIncorrect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WallTests$CountTests.shouldReturnAppropriateCountOfBlocksWhenGetSimpleInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HorusTask" />
       <extension name="coverage">
         <pattern>
@@ -78,15 +95,15 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.horus.services" />
-      <option name="MAIN_CLASS_NAME" value="org.horus.services.WallServiceTests" />
-      <option name="METHOD_NAME" value="findBLockByColorTestsPassIncorrect" />
+      <option name="PACKAGE_NAME" value="org.horus.services.WallTests" />
+      <option name="MAIN_CLASS_NAME" value="org.horus.services.WallTests$CountTests" />
+      <option name="METHOD_NAME" value="shouldReturnAppropriateCountOfBlocksWhenGetSimpleInput" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WallServiceTests.findBLocksByMaterialTestsPassCorrect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WallTests$FindBlockByColorTests.shouldReturnFalseAtIsPresentSectionWhenBLocksWithGivenColorNoExists" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HorusTask" />
       <extension name="coverage">
         <pattern>
@@ -94,15 +111,15 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.horus.services" />
-      <option name="MAIN_CLASS_NAME" value="org.horus.services.WallServiceTests" />
-      <option name="METHOD_NAME" value="findBLocksByMaterialTestsPassCorrect" />
+      <option name="PACKAGE_NAME" value="org.horus.services.WallTests" />
+      <option name="MAIN_CLASS_NAME" value="org.horus.services.WallTests$FindBlockByColorTests" />
+      <option name="METHOD_NAME" value="shouldReturnFalseAtIsPresentSectionWhenBLocksWithGivenColorNoExists" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WallServiceTests.findBlockModelByColorTestsPassCorrect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WallTests$FindBlocksByMaterialTests.shouldReturnAppropriateMaterialOfBlockWhenGetCompositeBlockInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HorusTask" />
       <extension name="coverage">
         <pattern>
@@ -110,15 +127,15 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.horus.services" />
-      <option name="MAIN_CLASS_NAME" value="org.horus.services.WallServiceTests" />
-      <option name="METHOD_NAME" value="findBlockModelByColorTestsPassCorrect" />
+      <option name="PACKAGE_NAME" value="org.horus.services.WallTests" />
+      <option name="MAIN_CLASS_NAME" value="org.horus.services.WallTests$FindBlocksByMaterialTests" />
+      <option name="METHOD_NAME" value="shouldReturnAppropriateMaterialOfBlockWhenGetCompositeBlockInput" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="WallServiceTests.findBlockModelByColorTestsPassIncorrect" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="WallTests$FindBlocksByMaterialTests.shouldReturnAppropriateMaterialOfBlockWhenGetNestedCompositeBlockInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="HorusTask" />
       <extension name="coverage">
         <pattern>
@@ -126,9 +143,9 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="org.horus.services" />
-      <option name="MAIN_CLASS_NAME" value="org.horus.services.WallServiceTests" />
-      <option name="METHOD_NAME" value="findBlockModelByColorTestsPassIncorrect" />
+      <option name="PACKAGE_NAME" value="org.horus.services.WallTests" />
+      <option name="MAIN_CLASS_NAME" value="org.horus.services.WallTests$FindBlocksByMaterialTests" />
+      <option name="METHOD_NAME" value="shouldReturnAppropriateMaterialOfBlockWhenGetNestedCompositeBlockInput" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -136,11 +153,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.WallServiceTests.findBlockModelByColorTestsPassIncorrect" />
-        <item itemvalue="JUnit.WallServiceTests.countBLocksTestsPassCorrect" />
-        <item itemvalue="JUnit.WallServiceTests.findBLocksByMaterialTestsPassCorrect" />
-        <item itemvalue="JUnit.WallServiceTests.findBlockModelByColorTestsPassCorrect" />
-        <item itemvalue="JUnit.WallServiceTests.findBLockByColorTestsPassIncorrect" />
+        <item itemvalue="JUnit.WallTests$FindBlockByColorTests.shouldReturnFalseAtIsPresentSectionWhenBLocksWithGivenColorNoExists" />
+        <item itemvalue="JUnit.WallTests$CountTests.shouldReturnAppropriateCountOfBlocksWhenGetCompositeBlockInput" />
+        <item itemvalue="JUnit.WallTests$CountTests.shouldReturnAppropriateCountOfBlocksWhenGetSimpleInput" />
+        <item itemvalue="JUnit.WallTests$FindBlocksByMaterialTests.shouldReturnAppropriateMaterialOfBlockWhenGetNestedCompositeBlockInput" />
+        <item itemvalue="JUnit.WallTests$FindBlocksByMaterialTests.shouldReturnAppropriateMaterialOfBlockWhenGetCompositeBlockInput" />
       </list>
     </recent_temporary>
   </component>
@@ -155,7 +172,8 @@
       <workItem from="1702327851885" duration="4164000" />
       <workItem from="1702473670494" duration="61410000" />
       <workItem from="1702725720972" duration="2181000" />
-      <workItem from="1702728603634" duration="2380000" />
+      <workItem from="1702728603634" duration="10533000" />
+      <workItem from="1703844716897" duration="22591000" />
     </task>
     <task id="LOCAL-00001" summary="Implement Task Logic">
       <created>1702614009023</created>
@@ -171,7 +189,14 @@
       <option name="project" value="LOCAL" />
       <updated>1702646009822</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="feature: create logic of given functions and tests passed">
+      <created>1702731505494</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1702731505494</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +215,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Implement Task Logic" />
-    <option name="LAST_COMMIT_MESSAGE" value="Implement Task Logic" />
+    <MESSAGE value="feature: create logic of given functions and tests passed" />
+    <option name="LAST_COMMIT_MESSAGE" value="feature: create logic of given functions and tests passed" />
   </component>
 </project>
