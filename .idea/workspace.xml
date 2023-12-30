@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9d9a7623-25b8-4b95-8991-5b867a464609" name="Changes" comment="fix: reformat code" />
+    <list default="true" id="9d9a7623-25b8-4b95-8991-5b867a464609" name="Changes" comment="fix: reformat code">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -24,47 +26,47 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 1
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
   <component name="ProjectId" id="2ZPdo537YP0kw4knExdshGG1ajx" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "JUnit.WallServiceTests.testFindBlockByColor.executor": "Run",
-    "JUnit.WallTests$CountTests.shouldReturnAppropriateCountOfBlocksWhenGetCompositeBlockInput.executor": "Run",
-    "JUnit.WallTests$CountTests.shouldReturnAppropriateCountOfBlocksWhenGetSimpleInput.executor": "Run",
-    "JUnit.WallTests$FindBlockByColorTests.shouldReturnAppropriateColorOfBlockWhenGetComplexInput.executor": "Run",
-    "JUnit.WallTests$FindBlockByColorTests.shouldReturnAppropriateColorOfBlockWhenGetCompositeBlockInput.executor": "Run",
-    "JUnit.WallTests$FindBlockByColorTests.shouldReturnAppropriateColorOfBlockWhenGetNestedCompositeBlockInput.executor": "Run",
-    "JUnit.WallTests$FindBlockByColorTests.shouldReturnFalseAtIsPresentSectionWhenBLocksWithGivenColorNoExists.executor": "Run",
-    "JUnit.WallTests$FindBlocksByMaterialTests.shouldReturnAppropriateMaterialOfBlockWhenGetCompositeBlockInput.executor": "Run",
-    "JUnit.WallTests$FindBlocksByMaterialTests.shouldReturnAppropriateMaterialOfBlockWhenGetNestedCompositeBlockInput.executor": "Run",
-    "JUnit.WallTests$FindBlocksByMaterialTests.shouldReturnAppropriateMaterialOfBlockWhenGetSimpleInput.executor": "Run",
-    "JUnit.WallTests$WallTests_1.testFindBlockByColor.executor": "Run",
-    "JUnit.WallTests$testFindBlockByColor.executor": "Run",
-    "JUnit.WallTests$testFindBlockByColor.testFindBlockByColor.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "kotlin-language-version-configured": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;JUnit.WallServiceTests.testFindBlockByColor.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.WallTests$CountTests.shouldReturnAppropriateCountOfBlocksWhenGetCompositeBlockInput.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.WallTests$CountTests.shouldReturnAppropriateCountOfBlocksWhenGetSimpleInput.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.WallTests$FindBlockByColorTests.shouldReturnAppropriateColorOfBlockWhenGetComplexInput.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.WallTests$FindBlockByColorTests.shouldReturnAppropriateColorOfBlockWhenGetCompositeBlockInput.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.WallTests$FindBlockByColorTests.shouldReturnAppropriateColorOfBlockWhenGetNestedCompositeBlockInput.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.WallTests$FindBlockByColorTests.shouldReturnFalseAtIsPresentSectionWhenBLocksWithGivenColorNoExists.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.WallTests$FindBlocksByMaterialTests.shouldReturnAppropriateMaterialOfBlockWhenGetCompositeBlockInput.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.WallTests$FindBlocksByMaterialTests.shouldReturnAppropriateMaterialOfBlockWhenGetNestedCompositeBlockInput.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.WallTests$FindBlocksByMaterialTests.shouldReturnAppropriateMaterialOfBlockWhenGetSimpleInput.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.WallTests$WallTests_1.testFindBlockByColor.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.WallTests$testFindBlockByColor.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.WallTests$testFindBlockByColor.testFindBlockByColor.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\K1\JavaProjects\HorusTask" />
@@ -174,6 +176,7 @@
       <workItem from="1702725720972" duration="2181000" />
       <workItem from="1702728603634" duration="10533000" />
       <workItem from="1703844716897" duration="22591000" />
+      <workItem from="1703896919331" duration="611000" />
     </task>
     <task id="LOCAL-00001" summary="Implement Task Logic">
       <created>1702614009023</created>
@@ -196,7 +199,15 @@
       <option name="project" value="LOCAL" />
       <updated>1702731505494</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fix: reformat code">
+      <option name="closed" value="true" />
+      <created>1703897004331</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1703897004331</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,6 +227,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Implement Task Logic" />
     <MESSAGE value="feature: create logic of given functions and tests passed" />
-    <option name="LAST_COMMIT_MESSAGE" value="feature: create logic of given functions and tests passed" />
+    <MESSAGE value="fix: reformat code" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix: reformat code" />
   </component>
 </project>

@@ -1,25 +1,28 @@
-Poniżej przekazujemy zadanie z prośbą o analizę poniższego kodu i zaimplementowanie metod findBlockByColor, findBlocksByMaterial, count w klasie Wall - najchętniej unikając powielania kodu i umieszczając całą logikę w klasie Wall. Z uwzględnieniem w analizie i implementacji interfejsu CompositeBlock!
-
-interface Structure {
+ Poniżej przekazujemy zadanie z prośbą o analizę poniższego kodu i zaimplementowanie metod 
+ * findBlockByColor, 
+ * findBlocksByMaterial, 
+ * count 
+###### w klasie Wall - najchętniej unikając powielania kodu i umieszczając całą logikę w klasie Wall. Z uwzględnieniem w analizie i implementacji interfejsu CompositeBlock!
+### interface Structure {
 // zwraca dowolny element o podanym kolorze
-Optional<Block> findBlockByColor(String color);
+#### Optional<Block> findBlockByColor(String color);
 
 // zwraca wszystkie elementy z danego materiału
-List<Block> findBlocksByMaterial(String material);
+#### ist<Block> findBlocksByMaterial(String material);
 
 //zwraca liczbę wszystkich elementów tworzących strukturę
-int count();
-}
+#### int count();
+### }
 
-public class Wall implements Structure {
-private List<Block> blocks;
-}
+### public class Wall implements Structure {
+#### private List<Block> blocks;
+### }
 
-interface Block {
-String getColor();
-String getMaterial();
-}
+### interface Block {
+#### String getColor();
+#### String getMaterial();
+### }
 
-interface CompositeBlock extends Block {
-List<Block> getBlocks();
-}
+### interface CompositeBlock extends Block {
+#### List<Block> getBlocks();
+### }
