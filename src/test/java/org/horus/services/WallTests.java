@@ -55,7 +55,6 @@ public class WallTests {
       Assert.assertFalse(block.isPresent());
     }
 
-
     @Test
     public void shouldReturnAppropriateColorOfBlockWhenGetVeryComplexInput() {
       Wall wall = new Wall();
