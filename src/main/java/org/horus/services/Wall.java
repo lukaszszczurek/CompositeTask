@@ -3,7 +3,6 @@ package org.horus.services;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
-import java.util.stream.Stream;
 import org.horus.interfaces.Block;
 import org.horus.interfaces.CompositeBlock;
 import org.horus.interfaces.Structure;
@@ -15,51 +14,54 @@ public class Wall implements Structure {
     this.blocks = new ArrayList<>();
   }
 
-  // Metoda dodająca blok do struktury ściany
   public void addBlock(List<Block> block) {
     blocks.addAll(block);
   }
 
   @Override
   public Optional<Block> findBlockByColor(String color) {
-    return blocks.stream()
-        .flatMap(block -> {
-          if (color.equals(block.getColor())) {
-            return Stream.of(block);
-          } else if (block instanceof CompositeBlock) {
-            return ((CompositeBlock) block).getBlocks().stream();
-          } else {
-            return Stream.empty();
-          }
-        })
-        .filter(block -> color.equals(block.getColor()))
-        .findFirst();
+    return findBlockByColorRecursively(color, blocks);
   }
 
   @Override
   public List<Block> findBlocksByMaterial(String material) {
-    List<Block> result = new ArrayList<>();
-
-    blocks.stream()
-        .flatMap(block -> {
-          if (material.equals(block.getMaterial())) {
-            return Stream.of(block);
-          } else if (block instanceof CompositeBlock) {
-            return ((CompositeBlock) block).getBlocks().stream();
-          } else {
-            return Stream.empty();
-          }
-        })
-        .filter(block -> material.equals(block.getMaterial()))
-        .forEach(result::add);
-    return result;
+    return findBlocksByMaterialRecursively(material, blocks);
   }
 
   @Override
   public int count() {
+    return countRecursively(blocks);
+  }
+
+  public Optional<Block> findBlockByColorRecursively(String color, List<Block> blocks) {
+    return blocks.stream()
+        .filter(block -> color.equals(block.getColor()))
+        .findFirst()
+        .or(() -> blocks.stream()
+            .filter(block -> block instanceof CompositeBlock)
+            .map(block -> findBlockByColorRecursively(color, ((CompositeBlock) block).getBlocks()))
+            .filter(Optional::isPresent)
+            .map(Optional::get)
+            .findFirst());
+  }
+
+  public List<Block> findBlocksByMaterialRecursively(String material, List<Block> blocks) {
+    List<Block> result = new ArrayList<>();
+    blocks.forEach(block -> {
+      if (material.equals(block.getMaterial())) {
+        result.add(block);
+      }
+      if (block instanceof CompositeBlock) {
+        result.addAll(findBlocksByMaterialRecursively(material, ((CompositeBlock) block).getBlocks()));
+      }
+    });
+    return result;
+  }
+
+  public int countRecursively(List<Block> blocks) {
     return blocks.stream()
         .mapToInt(block -> block instanceof CompositeBlock ?
-            ((CompositeBlock) block).getBlocks().size() :
+            countRecursively(((CompositeBlock) block).getBlocks()) :
             1)
         .sum();
   }

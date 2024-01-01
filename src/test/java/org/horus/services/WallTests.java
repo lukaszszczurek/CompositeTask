@@ -16,8 +16,8 @@ public class WallTests {
     @Test
     public void shouldReturnAppropriateColorOfBlockWhenGetSimpleInput() {
       Wall wall = new Wall();
-      List<Block> initialData_1 = getBlocksData_1();
-      wall.addBlock(initialData_1);
+      List<Block> initialDataOne = getBlocksDataOne();
+      wall.addBlock(initialDataOne);
 
       var block = wall.findBlockByColor("red");
       Assert.assertEquals("red", block.get().getColor());
@@ -29,8 +29,8 @@ public class WallTests {
     @Test
     public void shouldReturnAppropriateColorOfBlockWhenGetCompositeBlockInput() {
       Wall wall = new Wall();
-      List<Block> initialData_2 = getBlocksData_2();
-      wall.addBlock(initialData_2);
+      List<Block> initialDataTwo = getBlocksDataTwo();
+      wall.addBlock(initialDataTwo);
 
       var block = wall.findBlockByColor("red");
       Assert.assertEquals("red", block.get().getColor());
@@ -45,8 +45,8 @@ public class WallTests {
     @Test
     public void shouldReturnFalseAtIsPresentSectionWhenBLocksWithGivenColorNoExists() {
       Wall wall = new Wall();
-      List<Block> initialData_3 = getBlocksData_3();
-      wall.addBlock(initialData_3);
+      List<Block> initialThree = getBlocksDataThree();
+      wall.addBlock(initialThree);
 
       var block = wall.findBlockByColor("purple");
       Assert.assertFalse(block.isPresent());
@@ -57,10 +57,10 @@ public class WallTests {
 
 
     @Test
-    public void shouldReturnFalseForNonExistingBlocksWhenGetVeryComplexInput() {
+    public void shouldReturnAppropriateColorOfBlockWhenGetVeryComplexInput() {
       Wall wall = new Wall();
-      List<Block> initialData_3 = getBlocksData_3();
-      wall.addBlock(initialData_3);
+      List<Block> initDataThree = getBlocksDataThree();
+      wall.addBlock(initDataThree);
 
       var block = wall.findBlockByColor("red");
       Assert.assertEquals("red", block.get().getColor());
@@ -73,19 +73,22 @@ public class WallTests {
 
       block = wall.findBlockByColor("orange");
       Assert.assertEquals("orange", block.get().getColor());
+
+      block = wall.findBlockByColor("yellow");
+      Assert.assertEquals("yellow", block.get().getColor());
     }
 
-    private List<Block> getBlocksData_1() {
-      List<Block> initialData_1 = Arrays.asList(
+    private List<Block> getBlocksDataOne() {
+      List<Block> initDataOne = Arrays.asList(
           new BlockModel("red", "wood"),
           new BlockModel("blue", "wood"),
           new BlockModel("red", "stone")
       );
-      return initialData_1;
+      return initDataOne;
     }
 
-    private List<Block> getBlocksData_2() {
-      List<Block> initialData_2 = Arrays.asList(
+    private List<Block> getBlocksDataTwo() {
+      List<Block> initDataTwo = Arrays.asList(
           new BlockModel("red", "wood"),
           new BlockModel("blue", "wood"),
           new BlockModel("red", "stone"),
@@ -95,11 +98,11 @@ public class WallTests {
               new BlockModel("orange", "stone")
           ))
       );
-      return initialData_2;
+      return initDataTwo;
     }
 
-    private List<Block> getBlocksData_3() {
-      List<Block> initialData_3 = Arrays.asList(
+    private List<Block> getBlocksDataThree() {
+      List<Block> initDataThree = Arrays.asList(
           new BlockModel("red", "wood"),
           new BlockModel("blue", "wood"),
           new BlockModel("red", "stone"),
@@ -111,10 +114,16 @@ public class WallTests {
           new CompositeBlockImplementation(Arrays.asList(
               new BlockModel("red", "wood"),
               new BlockModel("blue", "wood"),
-              new BlockModel("pink", "stone")
+              new BlockModel("pink", "stone"),
+              new BlockModel("orange", "wood"),
+              new CompositeBlockImplementation(Arrays.asList(
+                  new BlockModel("yellow", "brick"),
+                  new BlockModel("yellow", "brick"),
+                  new BlockModel("yellow", "brick")
+              ))
           ))
       );
-      return initialData_3;
+      return initDataThree;
     }
   }
 
@@ -124,8 +133,8 @@ public class WallTests {
     @Test
     public void shouldReturnAppropriateMaterialOfBlockWhenGetSimpleInput() {
       Wall wall = new Wall();
-      List<Block> initialData_1 = getBlocksData_1();
-      wall.addBlock(initialData_1);
+      List<Block> initDataOne = getBlocksDataOne();
+      wall.addBlock(initDataOne);
 
       var blocks = wall.findBlocksByMaterial("wood");
       Assert.assertTrue(blocks.stream().allMatch(block -> block.getMaterial().equals("wood")));
@@ -139,8 +148,8 @@ public class WallTests {
     @Test
     public void shouldReturnAppropriateMaterialOfBlockWhenGetCompositeBlockInput() {
       Wall wall = new Wall();
-      List<Block> initialData_2 = getBlocksData_2();
-      wall.addBlock(initialData_2);
+      List<Block> initDataTwo = getBlocksDataTwo();
+      wall.addBlock(initDataTwo);
 
       var blocks = wall.findBlocksByMaterial("cotton");
       Assert.assertTrue(blocks.stream().allMatch(block -> block.getMaterial().equals("cotton")));
@@ -158,29 +167,33 @@ public class WallTests {
     @Test
     public void shouldReturnAppropriateMaterialOfBlockWhenGetNestedCompositeBlockInput() {
       Wall wall = new Wall();
-      List<Block> initialData_3 = getBlocksData_3();
-      wall.addBlock(initialData_3);
+      List<Block> initDataThree = getBlocksDataThree();
+      wall.addBlock(initDataThree);
 
       var blocks = wall.findBlocksByMaterial("wood");
       Assert.assertTrue(blocks.stream().allMatch(block -> block.getMaterial().equals("wood")));
-      Assert.assertEquals(9, blocks.size());
+      Assert.assertEquals(10, blocks.size());
 
       blocks = wall.findBlocksByMaterial("stone");
       Assert.assertTrue(blocks.stream().allMatch(block -> block.getMaterial().equals("stone")));
       Assert.assertEquals(3, blocks.size());
+
+      blocks = wall.findBlocksByMaterial("brick");
+      Assert.assertTrue(blocks.stream().allMatch(block -> block.getMaterial().equals("brick")));
+      Assert.assertEquals(2, blocks.size());
     }
 
-    private List<Block> getBlocksData_1() {
-      List<Block> initialData_1 = Arrays.asList(
+    private List<Block> getBlocksDataOne() {
+      List<Block> initDataOne = Arrays.asList(
           new BlockModel("red", "wood"),
           new BlockModel("blue", "wood"),
           new BlockModel("red", "stone")
       );
-      return initialData_1;
+      return initDataOne;
     }
 
-    private List<Block> getBlocksData_2() {
-      List<Block> initialData_2 = Arrays.asList(
+    private List<Block> getBlocksDataTwo() {
+      List<Block> initDataTwo = Arrays.asList(
           new BlockModel("red", "cotton"),
           new BlockModel("blue", "cotton"),
           new BlockModel("red", "stone"),
@@ -193,11 +206,11 @@ public class WallTests {
               new BlockModel("orange", "cotton")
           ))
       );
-      return initialData_2;
+      return initDataTwo;
     }
 
-    private List<Block> getBlocksData_3() {
-      List<Block> initialData_3 = Arrays.asList(
+    private List<Block> getBlocksDataThree() {
+      List<Block> initDataThree = Arrays.asList(
           new BlockModel("red", "wood"),
           new BlockModel("blue", "wood"),
           new BlockModel("red", "stone"),
@@ -214,11 +227,16 @@ public class WallTests {
           new CompositeBlockImplementation(Arrays.asList(
               new BlockModel("red", "wood"),
               new BlockModel("blue", "wood"),
-              new BlockModel("pink", "wood")
+              new BlockModel("pink", "wood"),
+              new CompositeBlockImplementation(Arrays.asList(
+                  new BlockModel("yellow", "wood"),
+                  new BlockModel("yellow", "brick"),
+                  new BlockModel("yellow", "brick")
+              ))
           ))
       );
 
-      return initialData_3;
+      return initDataThree;
     }
   }
 
@@ -227,8 +245,8 @@ public class WallTests {
     @Test
     public void shouldReturnAppropriateCountOfBlocksWhenGetSimpleInput() {
       Wall wall = new Wall();
-      List<Block> initialData_1 = getBlocksData_1();
-      wall.addBlock(initialData_1);
+      List<Block> initDataOne = getBlocksDataOne();
+      wall.addBlock(initDataOne);
 
       Assert.assertEquals(3, wall.count());
     }
@@ -236,23 +254,23 @@ public class WallTests {
     @Test
     public void shouldReturnAppropriateCountOfBlocksWhenGetCompositeBlockInput() {
       Wall wall = new Wall();
-      List<Block> initialData_2 = getBlocksData_2();
-      wall.addBlock(initialData_2);
+      List<Block> initDataTwo = getBlocksDataTwo();
+      wall.addBlock(initDataTwo);
 
       Assert.assertEquals(13, wall.count());
     }
 
-    private List<Block> getBlocksData_1() {
-      List<Block> initialData_1 = Arrays.asList(
+    private List<Block> getBlocksDataOne() {
+      List<Block> initDataOne = Arrays.asList(
           new BlockModel("red", "wood"),
           new BlockModel("blue", "wood"),
           new BlockModel("red", "stone")
       );
-      return initialData_1;
+      return initDataOne;
     }
 
-    private List<Block> getBlocksData_2() {
-      List<Block> initialData_2 = Arrays.asList(
+    private List<Block> getBlocksDataTwo() {
+      List<Block> initDataTwo = Arrays.asList(
           new BlockModel("red", "wood"),
           new BlockModel("blue", "wood"),
           new BlockModel("red", "stone"),
@@ -273,7 +291,7 @@ public class WallTests {
               new BlockModel("red", "wood")
           ))
       );
-      return initialData_2;
+      return initDataTwo;
     }
   }
 }
